@@ -1,0 +1,160 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('assets/luha.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
+}
+
+.calendar-controls {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.calendar-month {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px;
+}
+
+.calendar-month h2 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #f1f1f1;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.weekdays div {
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+}
+
+.weekdays div:last-child {
+    border-right: none;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: calc(280px / 6);
+}
+
+.days div {
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.days div:nth-child(7n+1) {
+    color: red;
+}
+
+.days div:nth-child(7n) {
+    color: blue;
+}
+
+.days div.holiday {
+    background-color: #ffeb3b;
+    color: #000;
+    font-weight: bold;
+}
+
+.days div.today {
+    background-color: #db81ff;
+    border: 2px solid #007bff;
+    color: #000;
+    font-weight: bold;
+}
+
+.days div.empty {
+    background-color: #f9f9f9;
+    border: none;
+}
+
+.observation-area {
+    margin: 20px auto; /* Centraliza a área de observação horizontalmente */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 280px;
+    z-index: 1;
+    position: relative;
+}
+
+.observation-area h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.observation-item {
+    margin-bottom: 10px;
+}
+
+.observation-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.observation-item input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

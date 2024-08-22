@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calendário</h1>
+    </header>
+    <div class="calendar">
+        <div class="calendar-controls">
+            <button id="prevMonth">&lt; Mês Anterior</button>
+            <button id="nextMonth">Próximo Mês &gt;</button>
+        </div>
+        <div class="calendar-month">
+            <h2 id="monthYear"></h2>
+            <div class="weekdays">
+                <div>Dom</div>
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sáb</div>
+            </div>
+            <div class="days" id="daysContainer"></div>
+        </div>
+    </div>
+    <div class="observation-area">
+        <h3>Área de Observação</h3>
+        <div class="observation-item">
+            <label for="name">Nome:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="observation-item">
+            <label for="number">Número:</label>
+            <input type="text" id="number">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
